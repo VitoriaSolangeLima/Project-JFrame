@@ -365,7 +365,7 @@ public class NewJFrame extends javax.swing.JFrame {
         // CADASTRAR SE TODOS OS CAMPOS ESTIVEREM PREENCHIDOS
         System.out.println(idade);
         
-        if ((nome.isEmpty()) || (resp.isEmpty() && idade < 18) || (date.isEmpty()) || (serie.isEmpty())) {
+        if ((nome.isEmpty()) || (resp.isEmpty() && idade < 18) || (date.isEmpty()) || (serie.isEmpty()) || (curso.isEmpty()) ) {
             JOptionPane.showMessageDialog(null, "PREENCHA TODOS OS CAMPOS");
         } else {
             // EXIBIR OS DADOS CADASTRADOS
