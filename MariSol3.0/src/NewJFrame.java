@@ -352,6 +352,15 @@ public class NewJFrame extends javax.swing.JFrame {
         String resp = txtResp.getText();
         String date = txtData.getText();
         String serie = txtSerie.getText();
+        String curso = "";
+        if (radEletro.isSelected()) {
+            curso = radEletro.getText();
+
+        }
+        if (radTI.isSelected()) {
+            curso = radTI.getText();
+
+        }
        
         // CADASTRAR SE TODOS OS CAMPOS ESTIVEREM PREENCHIDOS
         System.out.println(idade);
@@ -359,22 +368,13 @@ public class NewJFrame extends javax.swing.JFrame {
         if ((nome.isEmpty()) || (resp.isEmpty() && idade < 18) || (date.isEmpty()) || (serie.isEmpty())) {
             JOptionPane.showMessageDialog(null, "PREENCHA TODOS OS CAMPOS");
         } else {
+            // EXIBIR OS DADOS CADASTRADOS
             lblNome.setText(nome);
             lblNresp.setText(resp);
             lblData.setText(date);
             lblSerie.setText(serie);
-            
-            //EXIBIR A SELEÇÃO DO CURSO
-            String curso;
-            if (radEletro.isSelected()) {
-                curso = radEletro.getText();
-                lblcurso.setText(curso);
-
-            }
-            if (radTI.isSelected()) {
-                curso = radTI.getText();
-                lblcurso.setText(curso);
-            }
+            lblcurso.setText(curso);
+    
 
             // ALTERAR A VISIBILIDADE BOTÃO VOLTAR E DOS PAINÉIS
             panCadastro.setVisible(false);
