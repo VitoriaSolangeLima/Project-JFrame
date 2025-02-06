@@ -316,7 +316,7 @@ public class NewJFrame extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "DATA INVALIDA");
         }
-        // CALCULAR IDADE DO USUARIO
+        // CALCULAR IDADE DO USUARIO////
         Calendar dataNasc = Calendar.getInstance();
         dataNasc.setTime(dataNascimento);
 
